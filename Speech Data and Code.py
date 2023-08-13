@@ -190,6 +190,7 @@ sad            2     2       14    37      8       45  234          3
 surprised      4     0        7     6      6        0    2         93
 
 
+CLASSIFICATION REPORT
                 precision    recall  f1-score   support
 
        angry       0.70      0.78      0.74       346
