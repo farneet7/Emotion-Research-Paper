@@ -205,3 +205,65 @@ CLASSIFICATION REPORT
     accuracy                           0.61      2189
    macro avg       0.63      0.64      0.63      2189
 weighted avg       0.61      0.61      0.60      2189
+
+
+
+# Attempt 3: Used SVC and XGBoost
+#SVC
+SVC Test Accuracy: 0.5673823663773413
+SVC Confusion Matrix:
+           angry  calm  disgust  fear  happy  neutral  sad  surprised
+angry        262     0       27    10     36        5    3          3
+calm           0    26        2     0      0        1    5          0
+disgust       29     3      156    18     38       37   58          7
+fear          52     8       26   142     31       22   59          6
+happy         49     2       40    46    168       25   12          5
+neutral        2    11       39    15     28      167   45          0
+sad            3    12       29    18      8       42  232          1
+surprised     10     0        8     3      7        0    1         89
+
+SVC Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.64      0.76      0.70       346
+           1       0.42      0.76      0.54        34
+           2       0.48      0.45      0.46       346
+           3       0.56      0.41      0.47       346
+           4       0.53      0.48      0.51       347
+           5       0.56      0.54      0.55       307
+           6       0.56      0.67      0.61       345
+           7       0.80      0.75      0.78       118
+
+    accuracy                           0.57      2189
+   macro avg       0.57      0.60      0.58      2189
+weighted avg       0.57      0.57      0.56      2189
+
+
+# XGBOOST
+XGBoost Test Accuracy: 0.6130653266331658
+XGBoost Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.67      0.81      0.73       346
+           1       0.76      0.76      0.76        34
+           2       0.53      0.51      0.52       346
+           3       0.66      0.50      0.57       346
+           4       0.53      0.59      0.56       347
+           5       0.59      0.57      0.58       307
+           6       0.63      0.63      0.63       345
+           7       0.82      0.76      0.79       118
+
+    accuracy                           0.61      2189
+   macro avg       0.65      0.64      0.64      2189
+weighted avg       0.61      0.61      0.61      2189
+
+XGBoost Confusion Matrix:
+           angry  calm  disgust  fear  happy  neutral  sad  surprised
+angry        280     0       19     4     33        8    1          1
+calm           0    26        4     0      1        0    3          0
+disgust       43     1      175    13     46       32   32          4
+fear          27     1       25   173     45       16   51          8
+happy         54     0       22    29    205       23    9          5
+neutral        4     3       43    10     38      176   32          1
+sad            4     3       36    28     12       44  217          1
+surprised      8     0        6     6      6        0    2         90
